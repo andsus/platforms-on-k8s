@@ -1,0 +1,10 @@
+# In your values.yaml or deployment
+postgresql:
+  image:
+    tag: "15"
+kafka:
+  image:
+    tag: "3.4"
+redis:
+  image:
+    tag: "7.0"
