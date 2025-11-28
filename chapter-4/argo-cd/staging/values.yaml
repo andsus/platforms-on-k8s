@@ -1,11 +1,14 @@
-# Override subchart values
+# Override subchart values - use official images
 conference-app:
   postgresql:
     image:
-      tag: "latest"
+      repository: "postgres"
+      tag: "15"
   kafka:
     image:
-      tag: "latest"
+      repository: "confluentinc/cp-kafka"
+      tag: "7.4.0"
   redis:
     image:
-      tag: "latest"
+      repository: "redis"
+      tag: "7-alpine"
