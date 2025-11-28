@@ -6,8 +6,8 @@ conference-app:
       tag: "latest"
   kafka:
     image:
-      repository: "bitnami/kafka"
-      tag: "3.6.0"
+      repository: "bitnamicharts/kafka"
+      tag: "32.4.3"
   redis:
     image:
       repository: "bitnamisecure/redis"
