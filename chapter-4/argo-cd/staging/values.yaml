@@ -7,7 +7,7 @@ conference-app:
   kafka:
     image:
       repository: "bitnamicharts/kafka"
-      tag: "32.4.3"
+      tag: "sha256-12b98a1b358a6bc10c498817c801bd49e4a9d4c965af8acbe5a70764ec836997"
   redis:
     image:
       repository: "bitnamisecure/redis"
