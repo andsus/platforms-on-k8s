@@ -1,11 +1,5 @@
-# Override subchart values - use working Bitnami tags
+# Use default chart images - no overrides
 conference-app:
-  postgresql:
-    image:
-      tag: "15.4.0-debian-11-r45"
-  kafka:
-    image:
-      tag: "3.5.1-debian-11-r19"
-  redis:
-    image:
-      tag: "7.2.1-debian-11-r0"
+  install:
+    infrastructure: true
+    ingress: true
