@@ -1,5 +1,17 @@
-# Use default chart images - no overrides
+# Override subchart values with latest tags from bitnamicharts
 conference-app:
+  postgresql:
+    image:
+      repository: "docker.io/bitnamicharts/postgresql"
+      tag: "latest"
+  kafka:
+    image:
+      repository: "docker.io/bitnamicharts/kafka"
+      tag: "latest"
+  redis:
+    image:
+      repository: "docker.io/bitnamicharts/redis"
+      tag: "latest"
   install:
     infrastructure: true
     ingress: true
