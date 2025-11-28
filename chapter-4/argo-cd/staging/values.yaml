@@ -1,16 +1,16 @@
-# Override subchart values with latest tags from bitnamicharts
+# Override subchart values with correct repositories
 conference-app:
   postgresql:
     image:
-      repository: "docker.io/bitnamicharts/postgresql"
+      repository: "bitnamisecure/postgresql"
       tag: "latest"
   kafka:
     image:
-      repository: "docker.io/bitnamicharts/kafka"
+      repository: "bitnamicharts/kafka"
       tag: "latest"
   redis:
     image:
-      repository: "docker.io/bitnamicharts/redis"
+      repository: "bitnamisecure/redis"
       tag: "latest"
   install:
     infrastructure: true
