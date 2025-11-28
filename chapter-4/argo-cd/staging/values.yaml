@@ -2,15 +2,15 @@
 conference-app:
   postgresql:
     image:
-      repository: "docker.io/bitnamisecure/postgresql"
+      repository: "bitnamisecure/postgresql"
       tag: "latest"
   kafka:
     image:
-      repository: "docker.io/bitnamicharts/kafka"
-      tag: "32.4.3"
+      repository: "bitnami/kafka"
+      tag: "3.6.0"
   redis:
     image:
-      repository: "docker.io/bitnamisecure/redis"
+      repository: "bitnamisecure/redis"
       tag: "latest"
   install:
     infrastructure: true
