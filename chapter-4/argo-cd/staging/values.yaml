@@ -16,7 +16,7 @@ conference-app:
     registry: "salaboy"
     frontend:
       image: "frontend-go"
-    tag: "latest"
+    tag: "v1.0.0"
     debug: true
   install:
     infrastructure: true
