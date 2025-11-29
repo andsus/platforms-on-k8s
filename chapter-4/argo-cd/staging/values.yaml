@@ -1,4 +1,4 @@
-# Disable Kafka, keep PostgreSQL and Redis working
+# Fix frontend probe timing issues
 conference-app:
   postgresql:
     image:
@@ -12,6 +12,14 @@ conference-app:
     image:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
+  services:
+    frontend:
+      livenessProbe:
+        initialDelaySeconds: 30
+        periodSeconds: 30
+      readinessProbe:
+        initialDelaySeconds: 15
+        periodSeconds: 15
   install:
     infrastructure: true
     ingress: true
