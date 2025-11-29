@@ -1,4 +1,4 @@
-# Use fixed frontend image
+# Use fixed frontend image without localhost prefix
 conference-app:
   postgresql:
     image:
@@ -13,7 +13,7 @@ conference-app:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
   services:
-    registry: "localhost"
+    registry: ""
     frontend:
       image: "frontend-fixed"
     tag: "latest"
