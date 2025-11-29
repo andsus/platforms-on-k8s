@@ -247,7 +247,10 @@ func consumeFromKafka(reader *kafka.Reader) {
 	for {
 		m, err := reader.ReadMessage(context.Background())
 		if err != nil {
-			log.Fatalln(err)
+			// Don't kill the application - just log the error and continue
+			log.Printf("Error reading from Kafka: %v", err)
+			time.Sleep(5 * time.Second) // Wait before retrying
+			continue
 		}
 		fmt.Printf("message at topic:%v partition:%v offset:%v	%s = %s\n", m.Topic, m.Partition, m.Offset, string(m.Key), string(m.Value))
 
@@ -255,7 +258,7 @@ func consumeFromKafka(reader *kafka.Reader) {
 		err = json.Unmarshal(m.Value, &event)
 		if err != nil {
 			log.Printf("failed to parse Event Data from Kafka Message: %v", err)
-
+			continue // Don't add malformed events
 		}
 		events = append(events, event)
 	}

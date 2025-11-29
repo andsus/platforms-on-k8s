@@ -1,0 +1,6 @@
+dependencies:
+- name: conference-app
+  repository: oci://docker.io/salaboy
+  version: v1.0.0
+digest: sha256:77bbe2886b0dac025321ebface2e2a59e54eb8cc2b02535ddee25eb796706f17
+generated: "2025-11-28T13:01:06.227222916-08:00"

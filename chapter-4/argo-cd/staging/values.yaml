@@ -16,6 +16,7 @@ conference-app:
     registry: "localhost/salaboy"
     frontend:
       image: "frontend-go"
+      imagePullPolicy: "Never"
     tag: "v1.0.0"
     debug: true
   install:
