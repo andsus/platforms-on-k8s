@@ -1,4 +1,4 @@
-# Fix frontend probe timing to prevent premature kills
+# Use fixed frontend image
 conference-app:
   postgresql:
     image:
@@ -13,16 +13,11 @@ conference-app:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
   services:
+    registry: "localhost"
     frontend:
-      debug: true
-      livenessProbe:
-        initialDelaySeconds: 30
-        periodSeconds: 30
-        failureThreshold: 5
-      readinessProbe:
-        initialDelaySeconds: 15
-        periodSeconds: 15
-        failureThreshold: 3
+      image: "frontend-fixed"
+    tag: "latest"
+    debug: true
   install:
     infrastructure: true
     ingress: true
