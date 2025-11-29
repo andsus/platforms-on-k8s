@@ -13,9 +13,9 @@ conference-app:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
   services:
-    registry: "docker.io/library"
+    registry: "salaboy"
     frontend:
-      image: "frontend-fixed"
+      image: "frontend-go"
     tag: "latest"
     debug: true
   install:
