@@ -10,8 +10,8 @@ conference-app:
       tag: "latest"
   kafka:
     image:
-      repository: "soldevelo/kafka"
-      tag: "4.1"
+      repository: "bitnamilegacy/kafka"
+      tag: "4.0"
   install:
     infrastructure: true
     ingress: true
