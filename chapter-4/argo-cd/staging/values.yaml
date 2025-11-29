@@ -1,4 +1,4 @@
-# Use fixed frontend image without localhost prefix
+# Use local fixed frontend image
 conference-app:
   postgresql:
     image:
@@ -15,8 +15,8 @@ conference-app:
   services:
     registry: ""
     frontend:
-      image: "frontend-fixed"
-    tag: "latest"
+      image: "frontend-fixed:latest"
+    tag: ""
     debug: true
   install:
     infrastructure: true
