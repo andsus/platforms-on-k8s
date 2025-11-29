@@ -1,17 +1,17 @@
-# Override subchart values - use Ubuntu Kafka
+# Disable Kafka, keep PostgreSQL and Redis working
 conference-app:
   postgresql:
     image:
       repository: "bitnamisecure/postgresql"
       tag: "latest"
-  kafka:
-    image:
-      repository: "ubuntu/kafka"
-      tag: "latest"
   redis:
     image:
       repository: "bitnamisecure/redis"
       tag: "latest"
+  kafka:
+    image:
+      repository: "soldevelo/kafka"
+      tag: "4.1"
   install:
     infrastructure: true
     ingress: true
