@@ -11,12 +11,11 @@ conference-app:
   kafka:
     image:
       repository: "bitnamilegacy/kafka"
-      tag: "4.0"
+      tag: "4.0.0-debian-12-r10"
   services:
-    registry: "localhost/salaboy"
+    registry: "salaboy"
     frontend:
-      image: "frontend-go"
-      imagePullPolicy: "Never"
+      image: "frontend"
     tag: "v1.0.0"
     debug: true
   install:
