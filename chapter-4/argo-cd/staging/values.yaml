@@ -13,7 +13,7 @@ conference-app:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
   services:
-    registry: "salaboy"
+    registry: "localhost/salaboy"
     frontend:
       image: "frontend-go"
     tag: "v1.0.0"
