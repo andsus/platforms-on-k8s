@@ -1,4 +1,4 @@
-# Fix frontend probe timing issues
+# Fix frontend missing Redis password
 conference-app:
   postgresql:
     image:
@@ -14,12 +14,14 @@ conference-app:
       tag: "4.0"
   services:
     frontend:
-      livenessProbe:
-        initialDelaySeconds: 30
-        periodSeconds: 30
-      readinessProbe:
-        initialDelaySeconds: 15
-        periodSeconds: 15
+      env:
+        - name: REDIS_HOST
+          value: "staging-environment-redis-master.staging.svc.cluster.local"
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: staging-environment-redis
+              key: redis-password
   install:
     infrastructure: true
     ingress: true
