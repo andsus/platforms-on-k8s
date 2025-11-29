@@ -1,4 +1,4 @@
-# Working infrastructure with minimal frontend config
+# Enable frontend debug and check if it needs Redis
 conference-app:
   postgresql:
     image:
@@ -12,6 +12,9 @@ conference-app:
     image:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
+  services:
+    frontend:
+      debug: true
   install:
     infrastructure: true
     ingress: true
