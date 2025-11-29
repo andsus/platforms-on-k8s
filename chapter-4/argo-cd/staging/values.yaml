@@ -1,4 +1,4 @@
-# Use local fixed frontend image
+# Use fixed frontend image with proper template values
 conference-app:
   postgresql:
     image:
@@ -13,10 +13,10 @@ conference-app:
       repository: "bitnamilegacy/kafka"
       tag: "4.0"
   services:
-    registry: ""
+    registry: "docker.io/library"
     frontend:
-      image: "frontend-fixed:latest"
-    tag: ""
+      image: "frontend-fixed"
+    tag: "latest"
     debug: true
   install:
     infrastructure: true
