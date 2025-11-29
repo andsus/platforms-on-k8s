@@ -1,4 +1,4 @@
-# Enable frontend debug and check if it needs Redis
+# Fix frontend probe timing to prevent premature kills
 conference-app:
   postgresql:
     image:
@@ -15,6 +15,14 @@ conference-app:
   services:
     frontend:
       debug: true
+      livenessProbe:
+        initialDelaySeconds: 30
+        periodSeconds: 30
+        failureThreshold: 5
+      readinessProbe:
+        initialDelaySeconds: 15
+        periodSeconds: 15
+        failureThreshold: 3
   install:
     infrastructure: true
     ingress: true
