@@ -1,4 +1,4 @@
-# Override subchart values with working repositories
+# Override subchart values - use Ubuntu Kafka
 conference-app:
   postgresql:
     image:
@@ -6,7 +6,7 @@ conference-app:
       tag: "latest"
   kafka:
     image:
-      repository: "bitnamicharts/kafka"
+      repository: "ubuntu/kafka"
       tag: "latest"
   redis:
     image:
